@@ -1,0 +1,60 @@
+{
+  "isolation_forest": {
+    "precision": 0.821,
+    "recall": 0.914,
+    "f1": 0.865,
+    "confusion_matrix": [
+      [
+        5100,
+        14
+      ],
+      [
+        6,
+        64
+      ]
+    ]
+  },
+  "zscore_threshold": {
+    "precision": 1.0,
+    "recall": 0.971,
+    "f1": 0.986,
+    "confusion_matrix": [
+      [
+        5114,
+        0
+      ],
+      [
+        2,
+        68
+      ]
+    ]
+  },
+  "hybrid": {
+    "precision": 0.831,
+    "recall": 0.986,
+    "f1": 0.902,
+    "confusion_matrix": [
+      [
+        5100,
+        14
+      ],
+      [
+        1,
+        69
+      ]
+    ]
+  },
+  "recall_per_anomaly_type": {
+    "congestion": 1.0,
+    "cpu_spike": 1.0,
+    "degradation": 0.972,
+    "link_down": 1.0,
+    "telemetry_glitch": 1.0
+  },
+  "dataset": {
+    "rows": 5184,
+    "devices": 18,
+    "labelled_anomalies": 70
+  },
+  "method": "Per-device robust z-score features + Isolation Forest (200 trees, contamination=0.015) OR |z|>6 threshold"
+}

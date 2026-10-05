@@ -1,0 +1,144 @@
+[
+  {
+    "id": "SVC-CORE",
+    "name": "Core IP Transport",
+    "service_type": "core_transport",
+    "region": "Core-DC",
+    "depends_on": [
+      "GW-INT-01",
+      "CR-01",
+      "CR-02"
+    ],
+    "customers": null
+  },
+  {
+    "id": "SVC-BS-101",
+    "name": "LTE/5G Access - Site 101",
+    "service_type": "mobile_access",
+    "region": "North",
+    "depends_on": [
+      "BS-101",
+      "AR-01",
+      "CR-01"
+    ],
+    "customers": 4200
+  },
+  {
+    "id": "SVC-BS-102",
+    "name": "LTE/5G Access - Site 102",
+    "service_type": "mobile_access",
+    "region": "North",
+    "depends_on": [
+      "BS-102",
+      "AR-01",
+      "CR-01"
+    ],
+    "customers": 3100
+  },
+  {
+    "id": "E-101",
+    "name": "Enterprise Link E-101 (Bank)",
+    "service_type": "enterprise_link",
+    "region": "North",
+    "depends_on": [
+      "ENT-GW-101",
+      "AR-01",
+      "CR-01"
+    ],
+    "customers": null
+  },
+  {
+    "id": "SVC-BS-201",
+    "name": "LTE/5G Access - Site 201",
+    "service_type": "mobile_access",
+    "region": "East",
+    "depends_on": [
+      "BS-201",
+      "AR-02"
+    ],
+    "customers": 2800
+  },
+  {
+    "id": "SVC-BS-202",
+    "name": "LTE/5G Access - Site 202",
+    "service_type": "mobile_access",
+    "region": "East",
+    "depends_on": [
+      "BS-202",
+      "AR-02"
+    ],
+    "customers": 2500
+  },
+  {
+    "id": "SVC-BS-203",
+    "name": "LTE/5G Access - Site 203",
+    "service_type": "mobile_access",
+    "region": "East",
+    "depends_on": [
+      "BS-203",
+      "AR-02"
+    ],
+    "customers": null
+  },
+  {
+    "id": "E-201",
+    "name": "Enterprise Link E-201 (Hospital)",
+    "service_type": "enterprise_link",
+    "region": "East",
+    "depends_on": [
+      "ENT-GW-201",
+      "AR-02"
+    ],
+    "customers": null
+  },
+  {
+    "id": "SVC-BS-301",
+    "name": "LTE/5G Access - Site 301",
+    "service_type": "mobile_access",
+    "region": "South",
+    "depends_on": [
+      "BS-301",
+      "SW-301",
+      "AR-03",
+      "CR-02"
+    ],
+    "customers": 1900
+  },
+  {
+    "id": "SVC-BS-302",
+    "name": "LTE/5G Access - Site 302",
+    "service_type": "mobile_access",
+    "region": "South",
+    "depends_on": [
+      "BS-302",
+      "SW-301",
+      "AR-03",
+      "CR-02"
+    ],
+    "customers": 2200
+  },
+  {
+    "id": "SVC-BS-303",
+    "name": "LTE/5G Access - Site 303",
+    "service_type": "mobile_access",
+    "region": "South",
+    "depends_on": [
+      "BS-303",
+      "SW-301",
+      "AR-03"
+    ],
+    "customers": 1500
+  },
+  {
+    "id": "SVC-BS-304",
+    "name": "LTE/5G Access - Site 304",
+    "service_type": "mobile_access",
+    "region": "South",
+    "depends_on": [
+      "BS-304",
+      "AR-03",
+      "CR-02"
+    ],
+    "customers": null
+  }
+]

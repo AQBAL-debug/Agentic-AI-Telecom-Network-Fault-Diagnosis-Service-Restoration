@@ -1,0 +1,39 @@
+# render.yaml - Render Blueprint for the NOC Agentic AI backend
+# Place this file in the ROOT of your GitHub repo (same level as backend/ and frontend/).
+# Render -> New + -> Blueprint -> select the repo -> Apply.
+# It creates: 1 Python web service (FastAPI) + 1 free PostgreSQL database.
+
+services:
+  - type: web
+    name: noc-agentic-ai-backend
+    runtime: python
+    plan: free
+    rootDir: backend                      # all commands run inside backend/
+    buildCommand: >
+      pip install -r requirements.txt &&
+      python data/generate_data.py &&
+      python -m app.engines.anomaly
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeploy: true                      # redeploy on every git push
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
+      - key: DATABASE_URL                 # filled automatically from the database below
+        fromDatabase:
+          name: noc-ai-db
+          property: connectionString
+      - key: OPENROUTER_API_KEY           # you type the value in the Render dashboard
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: nvidia/nemotron-3-ultra-550b-a55b:free
+      - key: LLM_ENABLED
+        value: "true"
+      - key: CORS_ORIGINS                 # later change to your Vercel URL, e.g. https://noc-ai.vercel.app
+        value: "*"
+
+databases:
+  - name: noc-ai-db
+    plan: free
+    databaseName: noc_ai
+    user: noc_ai_user

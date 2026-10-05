@@ -1,0 +1,21 @@
+/* index.css - Tailwind layers + a few shared component classes used across pages */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { @apply text-txt font-sans antialiased; }
+.panel { @apply bg-panel border border-line rounded-md; }
+.btn { @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-sm font-medium border border-line bg-[#1C2B45] hover:border-sig focus:outline-none focus-visible:ring-2 focus-visible:ring-sig disabled:opacity-40; }
+.btn-primary { @apply bg-sig text-ink border-sig hover:bg-[#7ad5f0]; }
+.btn-danger { @apply text-crit border-crit/50 hover:border-crit; }
+.input { @apply bg-ink border border-line rounded px-2 py-1.5 text-sm focus:outline-none focus:border-sig; }
+.th { @apply text-left text-xs font-medium text-mute px-3 py-2 border-b border-line; }
+.td { @apply px-3 py-2 text-sm border-b border-line/60 align-top; }
+.id { @apply font-mono text-[13px]; }
+h1 { @apply text-xl font-semibold; }
+h2 { @apply text-base font-semibold; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* React Flow zoom controls in the dark theme */
+.react-flow__controls-button { background: #16233A; border-bottom: 1px solid #24344F; fill: #DCE6F2; }
+.react-flow__controls-button:hover { background: #24344F; }

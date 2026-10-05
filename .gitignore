@@ -1,0 +1,12 @@
+# .gitignore - files that must NOT be committed
+backend/.env
+backend/noc.db
+backend/__pycache__/
+**/__pycache__/
+backend/models/*.joblib
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+.venv/
+venv/

@@ -1,0 +1,508 @@
+{
+  "devices": [
+    {
+      "id": "GW-INT-01",
+      "name": "Internet Gateway 01",
+      "device_type": "internet_gateway",
+      "layer": 0,
+      "region": "Core-DC",
+      "vendor": "Juniper",
+      "model": "MX960",
+      "services": [
+        "SVC-CORE"
+      ],
+      "ip_address": "10.0.0.1",
+      "interfaces": [
+        "xe-0/0/0",
+        "xe-0/0/1"
+      ]
+    },
+    {
+      "id": "CR-01",
+      "name": "Core Router 01",
+      "device_type": "core_router",
+      "layer": 0,
+      "region": "Core-DC",
+      "vendor": "Cisco",
+      "model": "ASR 9906",
+      "services": [
+        "SVC-CORE"
+      ],
+      "ip_address": "10.0.0.2",
+      "interfaces": [
+        "Te0/0/0/0",
+        "Te0/0/0/1",
+        "Te0/0/0/2",
+        "Te0/0/0/5"
+      ]
+    },
+    {
+      "id": "CR-02",
+      "name": "Core Router 02",
+      "device_type": "core_router",
+      "layer": 0,
+      "region": "Core-DC",
+      "vendor": "Juniper",
+      "model": "PTX10008",
+      "services": [
+        "SVC-CORE"
+      ],
+      "ip_address": "10.0.0.3",
+      "interfaces": [
+        "et-0/0/0",
+        "et-0/0/2",
+        "et-0/0/3",
+        "et-0/0/5"
+      ]
+    },
+    {
+      "id": "AR-01",
+      "name": "Aggregation Router 01",
+      "device_type": "aggregation_router",
+      "layer": 1,
+      "region": "North",
+      "vendor": "Cisco",
+      "model": "ASR 920",
+      "services": [],
+      "ip_address": "10.1.0.4",
+      "interfaces": [
+        "GE-0/0/1",
+        "GE-0/0/2",
+        "GE-0/0/24",
+        "GE-0/0/3"
+      ]
+    },
+    {
+      "id": "AR-02",
+      "name": "Aggregation Router 02",
+      "device_type": "aggregation_router",
+      "layer": 1,
+      "region": "East",
+      "vendor": "Nokia",
+      "model": "7750 SR-1",
+      "services": [],
+      "ip_address": "10.1.0.5",
+      "interfaces": [
+        "1/1/1",
+        "1/1/2",
+        "1/2/1",
+        "1/2/2",
+        "1/2/3",
+        "1/2/4",
+        "1/2/5"
+      ]
+    },
+    {
+      "id": "AR-03",
+      "name": "Aggregation Router 03",
+      "device_type": "aggregation_router",
+      "layer": 1,
+      "region": "South",
+      "vendor": "Huawei",
+      "model": "NE40E-X8",
+      "services": [],
+      "ip_address": "10.1.0.6",
+      "interfaces": [
+        "GE0/1/0",
+        "GE0/2/0",
+        "GE0/2/1"
+      ]
+    },
+    {
+      "id": "SW-301",
+      "name": "Access Switch 301",
+      "device_type": "switch",
+      "layer": 2,
+      "region": "South",
+      "vendor": "Huawei",
+      "model": "S6730",
+      "services": [],
+      "ip_address": "10.2.0.7",
+      "interfaces": [
+        "GE0/0/1",
+        "GE0/0/2",
+        "GE0/0/3",
+        "XGE0/0/1"
+      ]
+    },
+    {
+      "id": "BS-101",
+      "name": "Base Station 101",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "North",
+      "vendor": "Ericsson",
+      "model": "RBS 6630",
+      "services": [
+        "SVC-BS-101"
+      ],
+      "ip_address": "10.2.0.8",
+      "interfaces": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "BS-102",
+      "name": "Base Station 102",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "North",
+      "vendor": "Ericsson",
+      "model": "RBS 6630",
+      "services": [
+        "SVC-BS-102"
+      ],
+      "ip_address": "10.2.0.9",
+      "interfaces": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "ENT-GW-101",
+      "name": "Enterprise Gateway 101",
+      "device_type": "enterprise_gw",
+      "layer": 2,
+      "region": "North",
+      "vendor": "Cisco",
+      "model": "ISR 4451",
+      "services": [
+        "E-101"
+      ],
+      "ip_address": "10.2.0.10",
+      "interfaces": [
+        "Gi0/0/0"
+      ]
+    },
+    {
+      "id": "BS-201",
+      "name": "Base Station 201",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "East",
+      "vendor": "Nokia",
+      "model": "AirScale",
+      "services": [
+        "SVC-BS-201"
+      ],
+      "ip_address": "10.2.0.11",
+      "interfaces": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "BS-202",
+      "name": "Base Station 202",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "East",
+      "vendor": "Nokia",
+      "model": "AirScale",
+      "services": [
+        "SVC-BS-202"
+      ],
+      "ip_address": "10.2.0.12",
+      "interfaces": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "BS-203",
+      "name": "Base Station 203",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "East",
+      "vendor": "Nokia",
+      "model": "AirScale",
+      "services": [
+        "SVC-BS-203"
+      ],
+      "ip_address": "10.2.0.13",
+      "interfaces": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "ENT-GW-201",
+      "name": "Enterprise Gateway 201",
+      "device_type": "enterprise_gw",
+      "layer": 2,
+      "region": "East",
+      "vendor": "Juniper",
+      "model": "SRX1500",
+      "services": [
+        "E-201"
+      ],
+      "ip_address": "10.2.0.14",
+      "interfaces": [
+        "ge-0/0/0"
+      ]
+    },
+    {
+      "id": "BS-301",
+      "name": "Base Station 301",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "South",
+      "vendor": "Huawei",
+      "model": "BBU5900",
+      "services": [
+        "SVC-BS-301"
+      ],
+      "ip_address": "10.2.0.15",
+      "interfaces": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "BS-302",
+      "name": "Base Station 302",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "South",
+      "vendor": "Huawei",
+      "model": "BBU5900",
+      "services": [
+        "SVC-BS-302"
+      ],
+      "ip_address": "10.2.0.16",
+      "interfaces": [
+        "eth0"
+      ]
+    },
+    {
+      "id": "BS-303",
+      "name": "Base Station 303",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "South",
+      "vendor": "Huawei",
+      "model": "BBU5900",
+      "services": [
+        "SVC-BS-303"
+      ],
+      "ip_address": "10.2.0.17",
+      "interfaces": [
+        "eth0",
+        "eth1"
+      ]
+    },
+    {
+      "id": "BS-304",
+      "name": "Base Station 304",
+      "device_type": "base_station",
+      "layer": 2,
+      "region": "South",
+      "vendor": "Huawei",
+      "model": "BBU5900",
+      "services": [
+        "SVC-BS-304"
+      ],
+      "ip_address": "10.2.0.18",
+      "interfaces": [
+        "eth0"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "id": "L-GW-INT01-CR01",
+      "source": "GW-INT-01",
+      "target": "CR-01",
+      "source_interface": "xe-0/0/0",
+      "target_interface": "Te0/0/0/0",
+      "link_type": "fiber",
+      "capacity_mbps": 100000,
+      "is_backup": false
+    },
+    {
+      "id": "L-GW-INT01-CR02",
+      "source": "GW-INT-01",
+      "target": "CR-02",
+      "source_interface": "xe-0/0/1",
+      "target_interface": "et-0/0/0",
+      "link_type": "fiber",
+      "capacity_mbps": 100000,
+      "is_backup": false
+    },
+    {
+      "id": "L-CR01-CR02",
+      "source": "CR-01",
+      "target": "CR-02",
+      "source_interface": "Te0/0/0/5",
+      "target_interface": "et-0/0/5",
+      "link_type": "fiber",
+      "capacity_mbps": 100000,
+      "is_backup": false
+    },
+    {
+      "id": "L-CR01-AR01",
+      "source": "CR-01",
+      "target": "AR-01",
+      "source_interface": "Te0/0/0/1",
+      "target_interface": "GE-0/0/24",
+      "link_type": "fiber",
+      "capacity_mbps": 10000,
+      "is_backup": false
+    },
+    {
+      "id": "L-CR01-AR02",
+      "source": "CR-01",
+      "target": "AR-02",
+      "source_interface": "Te0/0/0/2",
+      "target_interface": "1/1/1",
+      "link_type": "fiber",
+      "capacity_mbps": 10000,
+      "is_backup": false
+    },
+    {
+      "id": "L-CR02-AR02",
+      "source": "CR-02",
+      "target": "AR-02",
+      "source_interface": "et-0/0/2",
+      "target_interface": "1/1/2",
+      "link_type": "fiber",
+      "capacity_mbps": 10000,
+      "is_backup": true
+    },
+    {
+      "id": "L-CR02-AR03",
+      "source": "CR-02",
+      "target": "AR-03",
+      "source_interface": "et-0/0/3",
+      "target_interface": "GE0/1/0",
+      "link_type": "fiber",
+      "capacity_mbps": 10000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR01-BS-101",
+      "source": "AR-01",
+      "target": "BS-101",
+      "source_interface": "GE-0/0/1",
+      "target_interface": "eth0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR01-BS-102",
+      "source": "AR-01",
+      "target": "BS-102",
+      "source_interface": "GE-0/0/2",
+      "target_interface": "eth0",
+      "link_type": "microwave",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR01-ENT-GW-101",
+      "source": "AR-01",
+      "target": "ENT-GW-101",
+      "source_interface": "GE-0/0/3",
+      "target_interface": "Gi0/0/0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR02-BS-201",
+      "source": "AR-02",
+      "target": "BS-201",
+      "source_interface": "1/2/1",
+      "target_interface": "eth0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR02-BS-202",
+      "source": "AR-02",
+      "target": "BS-202",
+      "source_interface": "1/2/2",
+      "target_interface": "eth0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR02-BS-203",
+      "source": "AR-02",
+      "target": "BS-203",
+      "source_interface": "1/2/3",
+      "target_interface": "eth0",
+      "link_type": "microwave",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR02-ENT-GW-201",
+      "source": "AR-02",
+      "target": "ENT-GW-201",
+      "source_interface": "1/2/4",
+      "target_interface": "ge-0/0/0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR03-SW-301",
+      "source": "AR-03",
+      "target": "SW-301",
+      "source_interface": "GE0/2/0",
+      "target_interface": "XGE0/0/1",
+      "link_type": "fiber",
+      "capacity_mbps": 10000,
+      "is_backup": false
+    },
+    {
+      "id": "L-SW-301-BS-301",
+      "source": "SW-301",
+      "target": "BS-301",
+      "source_interface": "GE0/0/1",
+      "target_interface": "eth0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-SW-301-BS-302",
+      "source": "SW-301",
+      "target": "BS-302",
+      "source_interface": "GE0/0/2",
+      "target_interface": "eth0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-SW-301-BS-303",
+      "source": "SW-301",
+      "target": "BS-303",
+      "source_interface": "GE0/0/3",
+      "target_interface": "eth0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    },
+    {
+      "id": "L-AR02-BS-303",
+      "source": "AR-02",
+      "target": "BS-303",
+      "source_interface": "1/2/5",
+      "target_interface": "eth1",
+      "link_type": "microwave",
+      "capacity_mbps": 1000,
+      "is_backup": true
+    },
+    {
+      "id": "L-AR03-BS-304",
+      "source": "AR-03",
+      "target": "BS-304",
+      "source_interface": "GE0/2/1",
+      "target_interface": "eth0",
+      "link_type": "fiber",
+      "capacity_mbps": 1000,
+      "is_backup": false
+    }
+  ]
+}
